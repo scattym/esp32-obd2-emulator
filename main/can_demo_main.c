@@ -399,7 +399,8 @@ void app_main()
 	esp_vfs_fat_mount_config_t mountConfig;
 	wl_handle_t m_wl_handle;
 	mountConfig.max_files = 4;
-	mountConfig.format_if_mount_failed = false;
+	mountConfig.format_if_mount_failed = true;
+    mountConfig.allocation_unit_size = 4096;
 	ESP_ERROR_CHECK(esp_vfs_fat_spiflash_mount("/spiflash", "storage", &mountConfig, &m_wl_handle));
 
 	ESP_ERROR_CHECK(dumpDir("/spiflash"));
