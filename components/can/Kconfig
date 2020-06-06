@@ -14,8 +14,8 @@ config ESP_CAN_NODE_ITSELF
 
 config ESP_CAN_RXD_PIN_NUM
     int "Pin Number of CAN RXD"
-    range 4 5
-    default 4
+    range 1 42
+    default 13
     depends on ESPCAN
     help
         Number of CAN_RXD_PIN_NUM.
@@ -24,8 +24,8 @@ config ESP_CAN_RXD_PIN_NUM
 
 config ESP_CAN_TXD_PIN_NUM
     int "Pin Number of CAN TXD"
-    range 4 5
-    default 5
+    range 1 42
+    default 12
     depends on ESPCAN
     help
         Number of CAN_TXD_PIN_NUM.
